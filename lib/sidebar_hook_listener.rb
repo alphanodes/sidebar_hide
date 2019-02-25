@@ -8,7 +8,7 @@ class SidebarHookListener < Redmine::Hook::ViewListener
         return if info.present? && (info[:controller] == 'agile_charts' && info[:action] == 'show' ||
                                   info[:controller] == 'versions' && info[:action] == 'show')
       rescue StandardError => e
-        Rails.logger.info e.message
+        Rails.logger.info e.message unless e.class == ActionController::RoutingError
       end
     end
 
