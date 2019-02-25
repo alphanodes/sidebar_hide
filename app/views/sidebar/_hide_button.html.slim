@@ -1,0 +1,6 @@
+- if sidebar_content?
+  #sidebarHandler
+    #hideSidebarButton onclick='hideSideBar()'
+  - if cookies['sidebar_hide'] == 'hide'
+    javascript:
+      $(function() { hideSideBar(); });
