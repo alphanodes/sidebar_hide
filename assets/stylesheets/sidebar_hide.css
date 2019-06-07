@@ -40,10 +40,6 @@
   z-index: 0;
 }
 
-#sidebar {
-  z-index: 12;
-}
-
 #sidebar.sidebar_hidden {
   display: none;
 }
@@ -51,6 +47,10 @@
 body #content.sidebar_hidden {
   width: auto;
   margin-right: 0;
+}
+
+@media screen and (max-width: 899px) {
+  #hideSidebarButton { display: none; }
 }
 
 /***** Media print specific styles *****/
