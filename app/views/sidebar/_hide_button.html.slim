@@ -1,6 +1,7 @@
 - if sidebar_content?
+  - is_popup = defined?(popup_view?) && popup_view?
   #sidebarHandler
-    #hideSidebarButton onclick='hideSideBar()'
-  - if cookies['sidebar_hide'] == 'hide'
+    #hideSidebarButton onclick="hideSideBar(#{is_popup ? 'true' : 'false'})"
+  - if is_popup || cookies['sidebar_hide'] == 'hide'
     javascript:
-      $(function() { hideSideBar(); });
+      $(function() { hideSideBar(#{is_popup ? 'true' : 'false'}); });

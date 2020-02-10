@@ -29,12 +29,6 @@
   z-index: 11;
 }
 
-/* Overwrite min-height of agile charts, which does not work with sidebar
-.agile-chart-container {
-  height: 400px;
-}
-*/
-
 #sidebar {
   z-index: 0;
 }
@@ -48,7 +42,7 @@
   display: none;
 }
 
-body #content.sidebar_hidden {
+#content.sidebar_hidden {
   width: auto;
   margin-right: 0;
 }
