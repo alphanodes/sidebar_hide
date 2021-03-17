@@ -1,45 +1,53 @@
 Hide Sidebar
-====================
+============
 
 Adds a tiny hide button for sidebar of Redmine
 
-Features
-====================
+[![Run RuboCop](https://github.com/AlphaNodes/sidebar_hide/workflows/Run%20RuboCop/badge.svg)](https://github.com/AlphaNodes/sidebar_hide/actions/workflows/rubocop.yml)
 
- * Using cookie to remember status of the sidebar (hidden or not)
+Features
+--------
+
+- Using cookie to remember status of the sidebar (hidden or not)
 
 Installation
-====================
+------------
+
 Change to redmine/plugins folder and run:
+
 ```bash
-  git clone https://github.com/bdemirkir/sidebar_hide.git
+  git clone https://github.com/alphanodes/sidebar_hide.git
 ```
 
-Tested with...
-====================
+Tested with
+-----------
 
 Redmine:
- * =3.3.0
+
+- 4.0
+- 4.1
 
 Themes:
- * Default themes
- * Alternate
- * Classic 
- * [Gitmike](https://github.com/makotokw/redmine-theme-gitmike)
- * [RedmineCRM Themes](http://redminecrm.com/projects/themes):
-   * A1
-   * Highrise
-   * Coffee
-   * RedmineCRM
-   * Circle
+
+- Default themes
+- Alternate
+- Classic
+- [Gitmike](https://github.com/makotokw/redmine-theme-gitmike)
+- [RedmineCRM Themes](http://redminecrm.com/projects/themes):
+  - A1
+  - Highrise
+  - Coffee
+  - RedmineCRM
+  - Circle
 
 Browsers:
- * Google Chrome >=28
- * Firefox >=22
- * Internet Explorer 7-8-9-10
+
+- Google Chrome >=28
+- Firefox >=22
+- Internet Explorer 7-8-9-10
 
 License
-====================
+-------
 
 (The MIT License)
 

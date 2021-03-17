@@ -1,15 +1,20 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+
 Rails:
   Enabled: true
 
 AllCops:
-  TargetRubyVersion: 2.2
+  TargetRubyVersion: 2.4
   TargetRailsVersion: 5.2
+  NewCops: enable
 
 Metrics/AbcSize:
-  Max: 65
+  Enabled: false
 
 Metrics/BlockLength:
-  Max: 60
+  Enabled: false
 
 Metrics/ClassLength:
   Enabled: false
@@ -17,7 +22,7 @@ Metrics/ClassLength:
 Metrics/CyclomaticComplexity:
   Max: 20
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 140
 
 Metrics/MethodLength:
@@ -29,21 +34,39 @@ Metrics/ModuleLength:
 Metrics/PerceivedComplexity:
   Max: 25
 
-Rails/SkipsModelValidations:
+Rails/ApplicationJob:
+  Enabled: false
+
+Rails/ApplicationRecord:
   Enabled: false
 
 Rails/CreateTableWithTimestamps:
   Enabled: false
 
-# app/model/application_record.rb is missing in redmine, we can't use ApplicationRecord
-Rails/ApplicationRecord:
+Rails/HelperInstanceVariable:
   Enabled: false
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Performance/ChainArrayAllocation:
+  Enabled: true
 
 Style/AutoResourceCleanup:
   Enabled: true
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 
+# required for travis/ci (symbolic links problem)
 Style/ExpandPathArguments:
+  Enabled: false
+
+Style/HashTransformKeys:
+  Enabled: false
+
+Style/HashTransformValues:
   Enabled: false
