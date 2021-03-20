@@ -4,12 +4,11 @@ class SidebarHookListener < Redmine::Hook::ViewListener
   def view_layouts_base_html_head(context = {})
     if Redmine::Plugin.installed? 'redmine_agile'
       begin
-        info = Rails.application.routes.recognize_path(context[:request].url)
+        info = Rails.application.routes.recognize_path context[:request].url
         return if info.present? && (info[:controller] == 'agile_charts' && info[:action] == 'show' ||
                                   info[:controller] == 'versions' && info[:action] == 'show')
       rescue StandardError => e
-        Rails.logger.info e.message unless e.instance_of? 'ActionController::RoutingError'
-        instance_of? ActionController::RoutingError
+        Rails.logger.warn e.message unless e.is_a? ActionController::RoutingError
       end
     end
 
