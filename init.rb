@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_dependency 'sidebar_hook_listener'
 
 Redmine::Plugin.register :sidebar_hide do

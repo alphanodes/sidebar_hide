@@ -10,41 +10,22 @@ Features
 
 - Using cookie to remember status of the sidebar (hidden or not)
 
+Requirements
+------------
+
+* Redmine version >= 4.1.0
+* Ruby version >= 2.5.0
+
 Installation
 ------------
 
-Change to redmine/plugins folder and run:
-
 ```bash
-  git clone https://github.com/alphanodes/sidebar_hide.git
+  cd $REDMINE_ROOT
+  git clone https://github.com/alphanodes/sidebar_hide.git plugins/sidebar_hide
+  bundle install
 ```
 
-Tested with
------------
-
-Redmine:
-
-- 4.0
-- 4.1
-
-Themes:
-
-- Default themes
-- Alternate
-- Classic
-- [Gitmike](https://github.com/makotokw/redmine-theme-gitmike)
-- [RedmineCRM Themes](http://redminecrm.com/projects/themes):
-  - A1
-  - Highrise
-  - Coffee
-  - RedmineCRM
-  - Circle
-
-Browsers:
-
-- Google Chrome >=28
-- Firefox >=22
-- Internet Explorer 7-8-9-10
+Restart your application server after installation.
 
 License
 -------
