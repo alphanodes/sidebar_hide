@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-loader = RedminePluginKit::Loader.new plugin_id: 'redmine_ref_issues'
+loader = RedminePluginKit::Loader.new plugin_id: 'sidebar_hide'
 
 Redmine::Plugin.register :sidebar_hide do
   name 'Sidebar Hide Plugin'
